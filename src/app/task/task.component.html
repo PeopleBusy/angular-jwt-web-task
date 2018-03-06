@@ -2,6 +2,17 @@
     <li><a href="#" routerLink="/tasks">Home</a></li>
     <li class="active">Tasks</li>
 </ol>
-<p>
-  task works!
-</p>
+<p></p>
+
+<div class="col-md-12 table-responsive">
+  <table class="table table-bordered table-striped">
+      <tr>
+          <th>ID</th>
+          <th>Task Name</th>
+      </tr>
+      <tr *ngFor="let t of tasks">
+          <td>{{ t.id }}</td>
+          <td>{{ t.taskName }}</td>
+      </tr>
+  </table>
+</div>
